@@ -1,11 +1,17 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import MyNavbar from './components/MyNavbar';
+import MyFooter from './components/MyFooter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
+      <MyNavbar brandName="EpicStore"/>
+      </header>
+      <main bg="dark" data-bs-theme="dark">
+      <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,7 +23,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </main>
+      <footer>
+        <MyFooter />
+      </footer>
     </div>
   );
 }
