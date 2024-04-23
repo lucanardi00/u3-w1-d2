@@ -3,26 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MyNavbar from './components/MyNavbar';
 import MyFooter from './components/MyFooter';
+import MyAlert from './components/MyAlert';
+import BookGallery from './components/BookGallery';
 
 function App() {
   return (
     <div className="App">
       <header>
       <MyNavbar brandName="EpicStore"/>
+      <MyAlert />
       </header>
-      <main bg="dark" data-bs-theme="dark">
-      <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <main>
+      <div className="container mt-4">
+      <h1 className="text-center">Book Gallery</h1>
+      <BookGallery />
+      </div>
       </main>
       <footer>
         <MyFooter />
